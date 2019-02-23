@@ -9,6 +9,7 @@ def about(request):
     return render(request, 'about.html')
 
 def result(request):
+    name = request.GET['user']
     text = request.GET['fulltext']
     words = text.split()
     word_dictionary = {}
@@ -21,5 +22,5 @@ def result(request):
             # add to dictionary
             word_dictionary[word]=1
 
-    return render(request, 'result.html', {'full': text, 'total' : len(words), 'dictionary' : word_dictionary.items()})
+    return render(request, 'result.html', {'username': name, 'full': text, 'total' : len(words), 'dictionary' : word_dictionary.items()})
     

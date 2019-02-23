@@ -1,8 +1,11 @@
 <h1>안녕하세요, 여기서 글자를 세세요!!</h1>
 
 <a href="{%url 'about'%}">ABOUT</a>
-
+<br>
+<h4>이름을 입력하세요.</h4>
 <form action="{%url 'result'%}">
+   <textarea cols="10" rows="10" name="user"></textarea>
+   <br><br>
    <textarea cols="40" rows="10" name="fulltext"></textarea>
    <br><br>
    <input type="submit" value= "Count!">
